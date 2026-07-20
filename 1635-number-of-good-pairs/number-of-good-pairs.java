@@ -16,13 +16,14 @@ class Solution {
         return c;  */
         HashMap<Integer,Integer> map = new HashMap<>();
         int c=0;
-    /*    for(int num : nums)
+              //cleaenest code 
+      for(int num : nums)
         {
-            c += map.getOrDefault(num,0);
+            c += map.getOrDefault(num,0);  // if key doesnt exits return 0 if exits return its freqd
 
             map.put(num,map.getOrDefault(num,0)+1);
         }
-        return c; */
+        return c;
    /*     for(int num : nums)
         {
             map.put(num,map.getOrDefault(num,0)+1);
@@ -35,17 +36,9 @@ class Solution {
             result = result + (count*(count-1))/2;
         }
         return result; */
-      //cleaenest code 
 
-      int result = 0;
 
-      for(int num : nums)
-      {
-         result += map.getOrDefault(num,0);  // if key doesnt exits return 0 if exits return its freqd
-
-         map.put(num,map.getOrDefault(num,0)+1);
-      }
-      return result;
+     
 
 
     }
