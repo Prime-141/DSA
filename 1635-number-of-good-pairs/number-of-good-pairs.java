@@ -23,7 +23,7 @@ class Solution {
             map.put(num,map.getOrDefault(num,0)+1);
         }
         return c; */
-        for(int num : nums)
+   /*     for(int num : nums)
         {
             map.put(num,map.getOrDefault(num,0)+1);
         }
@@ -34,7 +34,18 @@ class Solution {
             int count = map.get(key);
             result = result + (count*(count-1))/2;
         }
-        return result;
+        return result; */
+      //cleaenest code 
+
+      int result = 0;
+
+      for(int num : nums)
+      {
+         result += map.getOrDefault(num,0);  // if key doesnt exits return 0 if exits return its freqd
+
+         map.put(num,map.getOrDefault(num,0)+1);
+      }
+      return result;
 
 
     }
