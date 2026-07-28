@@ -13,7 +13,7 @@ class Solution {
         }
         return 0;  */
  
-        HashMap<Integer,Integer> map = new HashMap<>();
+     /*   HashMap<Integer,Integer> map = new HashMap<>();
         for(int num : nums)
         {
             map.put(num,map.getOrDefault(num,0)+1);
@@ -24,6 +24,24 @@ class Solution {
             if(map.get(key)>=2)
             {
                 return key;
+            }
+        }
+        return -1; */
+        Arrays.sort(nums);
+        int n = nums.length;
+        int p1 = 0;
+        int p2 = 1;
+
+        while(p2<n)
+        {
+            if(nums[p1] == nums[p2])
+            {
+                return nums[p1];
+            }
+            else
+            {
+                p1++;
+                p2++;
             }
         }
         return -1;
