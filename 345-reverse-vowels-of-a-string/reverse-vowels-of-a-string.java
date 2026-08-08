@@ -1,12 +1,15 @@
 class Solution {
     public boolean isVowel(char ch)
     {
-        return ch == 'a' || ch == 'A' || 
-               ch == 'e' || ch == 'E' ||  
-               ch == 'i' || ch == 'I' || 
-               ch == 'o' || ch == 'O' || 
-               ch == 'u' || ch == 'U';
+        if (ch=='a' || ch=='A' || ch=='e' || ch=='E' || ch=='i' || ch=='I' || ch=='o' || ch=='O' || ch=='u' || ch=='U')
+            return true;
+
+
+
+        return false;
+
     }
+    
     public String reverseVowels(String s) {
 
         char [] arr = s.toCharArray();
