@@ -6,7 +6,7 @@ class Solution {
         int start =0;
         int end =n-1;
 
-     /*   int currA = (Math.min(height[start],height[end])) * (end-start);
+        int currA = 0;
 
         while(start < end)
         {
@@ -18,15 +18,15 @@ class Solution {
             {
                 start++;
             }
-            else if(height[start] > height[end])
+            else 
             {
                 end--;
             }
             
         }
-        return currA; */
+        return currA; 
 
-        int maxWater = 0;
+    /*    int maxWater = 0;
         while(start < end)
         {
             int w = end - start;
@@ -48,6 +48,6 @@ class Solution {
 
         }
 
-        return maxWater;
+        return maxWater; */
     }
 }
