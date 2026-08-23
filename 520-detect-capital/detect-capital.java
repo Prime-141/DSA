@@ -1,7 +1,7 @@
 import java.util.*;
 class Solution {
 
-    boolean allCapital(String word)
+  /*  boolean allCapital(String word)
     {
         for(char ch : word.toCharArray())
         {
@@ -24,6 +24,19 @@ class Solution {
         }
         return true;
     }
+    */
+
+    boolean check(String word,char start, char end)
+    {
+        for(char ch : word.toCharArray())
+        {
+            if(ch <start || ch > end)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
     public boolean detectCapitalUse(String word) {
         
        int n = word.length();
@@ -31,7 +44,13 @@ class Solution {
 
 
 
-       if(allCapital(word) || allSmall(word) || allSmall(word.substring(1,n)))
+     /*  if(allCapital(word) || allSmall(word) || allSmall(word.substring(1,n)))
+       {
+        return true;
+       }
+       return false; */
+
+       if(check(word,'A','Z') || check(word,'a','z') || check(word.substring(1,n),'a','z'))
        {
         return true;
        }
