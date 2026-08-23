@@ -1,7 +1,7 @@
 import java.util.*;
 class Solution {
 
-  /*  boolean allCapital(String word)
+    boolean allCapital(String word)
     {
         for(char ch : word.toCharArray())
         {
@@ -12,6 +12,7 @@ class Solution {
         }
         return true;
     }
+    /*
 
     boolean allSmall(String word)
     {
@@ -43,17 +44,43 @@ class Solution {
 
 
 
-
+    // --------------------------------
+    // FIRST APPROCH
+    // --------------------------------
      /*  if(allCapital(word) || allSmall(word) || allSmall(word.substring(1,n)))
        {
         return true;
        }
        return false; */
 
-       if(check(word,'A','Z') || check(word,'a','z') || check(word.substring(1,n),'a','z'))
+    // -------------------------------
+    // First APPROCH clean code
+    //-------------------------------
+    /*   if(check(word,'A','Z') || check(word,'a','z') || check(word.substring(1,n),'a','z'))
+       {
+        return true;
+       }
+       return false; */
+
+// -----------------------
+// SECOND APPROCH 
+// ---------------------
+       int c=0;
+
+       for(char ch : word.toCharArray())
+       {
+          if (ch >='A' && ch <='Z')
+          {
+            c++;
+          }
+       }
+
+       if((c==n) || (c==0) || (c==1 && Character.isUpperCase(word.charAt(0))))
        {
         return true;
        }
        return false;
+
+
     }   
 }
