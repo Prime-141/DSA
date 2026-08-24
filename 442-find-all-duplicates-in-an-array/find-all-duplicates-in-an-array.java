@@ -21,7 +21,7 @@ class Solution {
 
         int n = nums.length;
         ArrayList<Integer> result = new ArrayList<>();
-
+/*
         for(int i=0; i<n; i++)
         {
             int num = Math.abs(nums[i]);
@@ -34,6 +34,21 @@ class Solution {
             else
             {
                 nums[idx] *= -1;
+            }
+        }
+        return result; */
+        int freq[] = new int[n+1];
+
+        for(int num : nums)
+        {
+            freq[num]++;
+        }
+
+        for(int i=1; i<=n; i++)
+        {
+            if(freq[i]==2)
+            {
+                result.add(i);
             }
         }
         return result;
