@@ -22,7 +22,7 @@ class Solution {
         {
             if(nums[j] != nums[j-1])
             {
-                nums[k]  = nums[j];
+                nums[k] = nums[j];
                 k++;
             }
         }
