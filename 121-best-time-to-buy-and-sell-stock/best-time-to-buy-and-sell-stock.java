@@ -8,7 +8,7 @@ class Solution {
 
         for(int price : prices)
         {
-            if(price < minPrice)
+            if(price <  minPrice)
             {
                 minPrice = price;
             }
