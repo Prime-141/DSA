@@ -9,7 +9,7 @@ class Solution {
         }
         return c; */
         
-        HashMap<Integer,Integer> map = new HashMap<>();
+    /*    HashMap<Integer,Integer> map = new HashMap<>();
         for(int num : nums)
         {
             map.put(num,map.getOrDefault(num,0)+1);
@@ -22,6 +22,13 @@ class Solution {
                 return key;
             }
         }
-        return -1;
+        return -1; */
+
+        int res=0;
+        for(int num : nums)
+        {
+            res ^= num;
+        }
+        return res;
     }
 }
