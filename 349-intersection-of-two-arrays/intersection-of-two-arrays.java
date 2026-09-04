@@ -18,7 +18,7 @@ class Solution {
             map.put(num,map.getOrDefault(num,0)+1);
         }
 
-        List<Integer> resultList = new ArrayList<>();
+     /*   List<Integer> resultList = new ArrayList<>();
 
         for(Integer key : map.keySet())
         {
@@ -34,6 +34,21 @@ class Solution {
             result[i] = resultList.get(i);
         }
         
-        return result;
+        return result; */
+
+
+        int k =0;
+        int result[] = new int[set1.size()];
+
+        for(int num : set1)
+        {
+            if(set2.contains(num))
+            {
+                result[k] = num;
+                k++;
+            }
+        }
+
+        return Arrays.copyOfRange(result,0,k);
     }
 }
