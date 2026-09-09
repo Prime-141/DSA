@@ -22,7 +22,7 @@ class Solution {
             map.put(nums[i],i);
         }
         return new int[] {}; */
-        int res[] = new int[2];
+      /*  int res[] = new int[2];
         for(int i=0; i<size; i++)
         {
             int sum = target - nums[i];
@@ -35,7 +35,27 @@ class Solution {
                 }
             }
         }
-        return res;
+        return res; */
+
+        Map<Integer,Integer> map = new HashMap<>();
+
+        for(int i=0; i<size; i++)
+        {
+            map.put(nums[i],i);
+        }
+
+        for(int i=0; i<size; i++)
+        {
+            int lookUp = target-nums[i];
+            if(map.containsKey(lookUp) && map.get(lookUp) != i)
+            {
+                return new int[] {
+                    map.get(lookUp),
+                    i
+                };
+            }
+        }
+        return new int[] {};
 
 
         
