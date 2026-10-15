@@ -1,7 +1,7 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
 
-        int size = nums.length;
+       /* int size = nums.length;
      /*   Arrays.sort(nums);
 
         for(int i=0; i<size; i++){
@@ -17,7 +17,13 @@ class Solution {
         }
         return size; */
 
-        int k=1;
+        /* Brute force  */
+
+
+
+        
+
+      /*  int k=1;
         for(int j=1; j<size; j++)
         {
             if(nums[j] != nums[j-1])
@@ -26,6 +32,22 @@ class Solution {
                 k++;
             }
         }
-        return k;
+        return k; */
+
+        int n = nums.length;
+
+        for(int i=0; i<n-1; i++)
+        {
+            if(nums[i] == nums[i+1])
+            {
+                for(int j=i+1; j<n-1; j++)
+                {
+                    nums[j] = nums[j+1];
+                }
+                n--;
+                i--;
+            }
+        }
+        return n;
     }
 }
