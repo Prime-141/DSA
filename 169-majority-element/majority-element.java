@@ -15,7 +15,7 @@ class Solution {
             return nums[i];
         }
         return -1; */
-       HashMap<Integer,Integer> map = new HashMap<>();
+       
    /*    for(int i=0; i<n; i++)
        {
         if(map.containsKey(nums[i]))
@@ -27,17 +27,23 @@ class Solution {
             map.put(nums[i],1);
         }
        } */
+       
+
+            HashMap<Integer,Integer> map = new HashMap<>();
+
        for(int num : nums)
        {
-           map.put(num,map.getOrDefault(num,0)+1);
+        map.put(num,map.getOrDefault(num,0)+1);
        }
-       for(int key : map.keySet())
+
+       for(Integer num : map.keySet())
        {
-          if(map.get(key)>target)
-          {
-            return key;
-          }
+        if(map.get(num)>n/2)
+        {
+            return num;
+        }
        }
+
        return -1;
     }
 }
