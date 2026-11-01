@@ -44,9 +44,9 @@ class Solution {
         {
             set.add(num);
         }
+        int n2 = set.size();
 
-        int n1 = set.size();
-        if(n1!=n)
+        if(n2!=n)
         {
             return true;
         }
